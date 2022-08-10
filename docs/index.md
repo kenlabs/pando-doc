@@ -1,4 +1,4 @@
-# Welcome to MkDocs
+# Welcome to Pando Docs
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 

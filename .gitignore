@@ -310,3 +310,7 @@ fabric.properties
 .idea/**/azureSettings.xml
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,webstorm,python
+/.idea/.gitignore
+/.idea/modules.xml
+/.idea/pando-doc.iml
+/.idea/vcs.xml
