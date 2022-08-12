@@ -1,5 +1,27 @@
 site_name: Pando Documentation
+site_url: https://pando-doc.kencloud.com
+nav:
+  - 'Home': 'index.md'
+  - 'Get Started':
+      - 'What is Pando': 'Get Started/What is Pando.md'
+  - 'Integrate with Pando':
+      - 'Brief Tutorial': 'Integrate with Pando/Brief Tutorial.md'
+  - 'User Guide':
+      - 'First Step': 'User Guide/User Guide.md'
+  - 'API References':
+      - 'HTTP API': 'API References/HTTP API.md'
+      - 'P2P API': 'API References/P2P API.md'
+  - 'Community & Contribute':
+      - 'Architecture':
+          - 'Overview': 'community-and-contribute/architecture/overview.md'
+      - 'Modules':
+          - 'Ratelimit': 'community-and-contribute/Modules/ratelimit.md'
+      - 'Contribute': 'community-and-contribute/contribute.md'
 theme:
   name: material
   palette:
     primary: green
+
+plugins:
+  - search:
+      indexing: 'full'
