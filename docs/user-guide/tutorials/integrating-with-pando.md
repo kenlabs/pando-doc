@@ -8,7 +8,7 @@ For now, `/pando/v0.0.1` is the topic Pando subscribes to.
 ### Prerequisite
 Pando accepts IPLD data from metadata providers with the following required IPLD children nodes:
 1. `Provider String` - provider's peer ID
-2. `Signature Bytes` - signature of the IPLD data: sign( bytes(PreviousID) . bytes(Payload) . bytes(Provider)) )
+2. `Signature Bytes` - signature of the IPLD data: dagjson.Encode( ipld.Node{PreviousID, Provider, Payload} ).Bytes()
 3. `Payload Bytes`   - bytes of your serialized metadata 
 
 and a nullable node:

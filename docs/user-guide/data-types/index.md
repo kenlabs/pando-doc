@@ -2,8 +2,17 @@
 
 PANDO is an IPLD database. It accepts IPLD data from metadata providers with the following required IPLD children nodes:
 1. `Provider String` - provider's peer ID
-2. `Signature Bytes` - signature of the IPLD data: sign( bytes(PreviousID) . bytes(Payload) . bytes(Provider)) )
-3. `Payload Bytes`   - bytes of your serialized metadata 
+2. `Signature Bytes` - signature of the IPLD data: dagjson.Encode( ipld.Node{PreviousID, Provider, Payload} ).Bytes()
+3. `Payload Bytes`   - bytes of your serialized metadata
+
+and a nullable node:
+1. `PreviousID nullable Link_Metadata` - a non null PreviousID will enable a recursive sync by Pando service. With this node, a full sync of linked IPLD data will be guaranteed.
+
+```
+Notice that, once PreviousID is absent when there is some previous metadata, Pando makes no guarantee about the state of metadata published, as the recursive sync won't happen in this case.
+
+Make sure you correctly link your chained metadata using PreviousID node.
+```
 
 IPLD stands for InterPlanetary Linked Data. It is the data model of the content-addressable web, which allows us to treat all hash-linked data structures as subsets of a unified information space, unifying all data models that link data with hashes as instances of IPLD.
 

@@ -1,6 +1,6 @@
 # Configuring PANDO
 
-Pando server supports the three types of configuration resourc: CLI flag, environment variable, and configuration file. They are prioritized in the following order:
+Pando server supports the three types of configuration resourc: CLI flag, environment variable, and configuration file.` They are prioritized in the following order:
 - CLI flag
 - environment variable
 - config file (yaml file)
