@@ -41,9 +41,9 @@ Start PANDO server daemon process
 | -r, --pando-root | string | Pando root directory which stores data and config file. | ~/.pando |
 | -c, --print-config | | Print the configuration info. | |
 | --profile-listen-addr | string | Profile server listen address(in multiaddress format, like /ip4/0.0.0.0/tcp/9010). | /ip4/0.0.0.0/tcp/9010 |
-| --ratelimit-bandwidth | float | Bandwidth of this runtime. | 1 |
+| --ratelimit-bandwidth | float | Bandwidth of this runtime (unit: Mbps) | 1 |
 | --ratelimit-enable | | Enable rate limiter | false |
-| --ratelimit-single-dag-size | float | Estimated single DAG size to receive from providers. | 1 |
+| --ratelimit-single-dag-size | float | Estimated single DAG size to receive from providers (unit: Mb) | 1 |
 | --snapshot-interval | string | interval to generate snapshot for meta. | 60m |
 | -v, --version | | Print the version. | |
 
